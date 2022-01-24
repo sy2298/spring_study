@@ -2,8 +2,9 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -39,7 +40,7 @@ class MemberServiceTest {
 
 
         //then
-        org.assertj.core.api.Assertions.assertThat(member.getName()).isEqualTo(findMember.getName());
+        Assertions.assertThat(member.getName()).isEqualTo(findMember.getName());
     }
     @Test
     public void extractDuplicateMember() {
@@ -56,7 +57,7 @@ class MemberServiceTest {
 //            memberService.join(member2);
 //            fail("예외가 발생해야 합니다.");
 //        } catch (IllegalStateException e) {
-//            org.assertj.core.api.Assertions.assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다");
+//           Assertions.assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다");
 //        }
 
         //then
