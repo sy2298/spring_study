@@ -12,7 +12,7 @@ public class MemberController {
     @Autowired
     public void setMemberService(MemberService memberService) {
         this.memberService = memberService;
-        
+
     }
 //    @Autowired //스프링이 스프링 컨테이너에 있는 MemberService를 연결시켜준다.
 //    public MemberController(MemberService memberService) {
